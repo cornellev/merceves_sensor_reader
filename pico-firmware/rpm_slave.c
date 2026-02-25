@@ -9,7 +9,7 @@
 #include "hardware/spi.h"
 #include "pico/stdlib.h"
 
-#include "telemetry_config.h"
+#include "rpm_config.h"
 
 #define SPI_PORT spi0
 #define PIN_RX 16
@@ -43,14 +43,17 @@
         const unsigned frame_bits = stuffed_bits + 16u;                                            \
         (frame_bits + 7u) / 8u;                                                                    \
     })
+
+// TODO: improve calculation
+#define MAX_PAYLOAD_BYTES (4 + 4 * N_CH * 2)
+
 uint8_t frame_buf[FRAME_MAX_BYTES];
 
 int data_chan;
 
 static inline float fake_signal_from_now(void) {
-    float now_us = (float)time_us_64();
-    float t = now_us * 1e-6f;
-    return 127.0f * sinf(t) + 127.0f;
+    // TODO: impl fake signal
+    return 67.0f;
 }
 
 inline void set_gpio_hi_z(uint pin) {
@@ -136,11 +139,7 @@ inline int bytes_used_from_bitpos(int bitpos) {
     return (bitpos + 7) >> 3;
 }
 
-static inline float adc_counts_to_volts(uint16_t raw) {
-    return ((float)raw) * (ADC_VREF / ADC_COUNTS_MAX);
-}
-
-static float read_channel(int i) {
+static float read_rpm(int i) {
     if (i < 0 || i >= N_CH)
         return (float)NAN;
 
@@ -148,20 +147,7 @@ static float read_channel(int i) {
     (void)i;
     return fake_signal_from_now();
 #else
-    uint8_t gpio = adc_gpios[i];
-    if (gpio < 26 || gpio > 29)
-        return (float)NAN;
-
-    // RP2040 mapping: ADC0..ADC3 correspond to GPIO 26..29
-    uint input = (uint)(gpio - 26);
-
-    adc_select_input(input);
-    (void)adc_read(); // Discard first reading after switching input per
-                      // datasheet recommendation
-    uint16_t raw = adc_read();
-
-    float v = adc_counts_to_volts(raw);
-    return conv_m[i] * v + conv_b[i];
+    return 67;
 #endif
 }
 
