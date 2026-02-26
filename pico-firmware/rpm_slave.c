@@ -1,274 +1,240 @@
-#include <math.h>
-#include <stdbool.h>
-#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
+#include <stdbool.h>
 
-#include "hardware/adc.h"
-#include "hardware/dma.h"
-#include "hardware/spi.h"
 #include "pico/stdlib.h"
-
-#include "rpm_config.h"
+#include "pico/time.h"
+#include "hardware/spi.h"
+#include "hardware/dma.h"
+#include "hardware/irq.h"
+#include "hardware/structs/io_bank0.h"
 
 #define SPI_PORT spi0
-#define PIN_RX 16
-#define PIN_CS 17
-#define PIN_SCK 18
-#define PIN_TX 19
-#define LED 25
+#define PIN_RX   16
+#define PIN_CS   17
+#define PIN_SCK  18
+#define PIN_TX   19
 
-// Flag byte (bit pattern 01111110). Master scans for this in the bitstream.
+#define HALL_PIN 2
+#define PPR      32
+
+#define MIN_RPM  10.0f
+#define MAX_RPM  8000.0f
+
 #define FLAG_BYTE 0x7E
 
-// RP2040 external ADC inputs are ADC0..ADC3 on GPIO 26..29 (4 total).
-#define MAX_CHANNELS 4
+#define PAYLOAD_LEN 12
+#define CRC_LEN     4
 
-#if (N_CH > MAX_CHANNELS)
-#error "N_CH must be <= MAX_CHANNELS (4)."
-#endif
-#if (N_CH < 1)
-#error "N_CH must be >= 1."
-#endif
+#define FRAME_MAX_BYTES ( \
+    ( ( ( ((PAYLOAD_LEN + CRC_LEN) * 8u * 6u + 4u) / 5u ) + 16u ) + 7u ) / 8u \
+)
 
-// Worst-case HDLC frame size for N_CH floats:
-//   payload = 4B timestamp + 4B * N_CH
-//   crc     = 4B
-//   stuffing worst-case: +1 bit per 5 bits
-//   flags   = 2 bytes (never stuffed)
-#define FRAME_MAX_BYTES                                                                            \
-    ({                                                                                             \
-        const unsigned payload_bytes = 4u + 4u * (unsigned)N_CH;                                   \
-        const unsigned stuffed_bits = ((payload_bytes + 4u) * 8u * 6u + 4u) / 5u;                  \
-        const unsigned frame_bits = stuffed_bits + 16u;                                            \
-        (frame_bits + 7u) / 8u;                                                                    \
-    })
+static volatile uint32_t last_rise_us = 0;
+static volatile float motor_rpm = 0.0f;
 
-// TODO: improve calculation
-#define MAX_PAYLOAD_BYTES (4 + 4 * N_CH * 2)
+static int dma_chan = -1;
 
-uint8_t frame_buf[FRAME_MAX_BYTES];
+static uint8_t payload[PAYLOAD_LEN];
+static uint8_t frame_buf[FRAME_MAX_BYTES];
+static volatile uint32_t frame_len = 0;
 
-int data_chan;
-
-static inline float fake_signal_from_now(void) {
-    // TODO: impl fake signal
-    return 67.0f;
-}
-
-inline void set_gpio_hi_z(uint pin) {
+static inline void set_gpio_hi_z(uint pin) {
     io_bank0_hw->io[pin].ctrl =
         (io_bank0_hw->io[pin].ctrl & ~IO_BANK0_GPIO0_CTRL_OEOVER_BITS) |
         (IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_DISABLE << IO_BANK0_GPIO0_CTRL_OEOVER_LSB);
 }
 
-void configure_dma(void) {
-    data_chan = dma_claim_unused_channel(true);
-    dma_channel_config c = dma_channel_get_default_config(data_chan);
-    channel_config_set_transfer_data_size(&c, DMA_SIZE_8);
-    channel_config_set_read_increment(&c, true);
-    channel_config_set_write_increment(&c, false);
-    channel_config_set_dreq(&c, DREQ_SPI0_TX);
-
-    dma_channel_configure(data_chan, &c, &spi_get_hw(SPI_PORT)->dr, frame_buf, 1, false);
+static inline void set_tx_spi_func(void) {
+    gpio_set_function(PIN_TX, GPIO_FUNC_SPI);
 }
 
-// IEEE CRC32
-uint32_t calculate_crc32(const uint8_t *data, size_t length) {
-    uint32_t crc = 0xFFFFFFFF;
-    for (size_t i = 0; i < length; i++) {
-        crc ^= data[i];
-        for (int j = 0; j < 8; j++) {
-            if (crc & 1)
-                crc = (crc >> 1) ^ 0xEDB88320;
-            else
-                crc >>= 1;
+static inline void pack_u32_le(uint8_t* dst, uint32_t x) {
+    dst[0] = (uint8_t)(x & 0xFF);
+    dst[1] = (uint8_t)((x >> 8) & 0xFF);
+    dst[2] = (uint8_t)((x >> 16) & 0xFF);
+    dst[3] = (uint8_t)((x >> 24) & 0xFF);
+}
+
+static inline void pack_f32_le(uint8_t* dst, float f) {
+    memcpy(dst, &f, 4);
+}
+
+static uint32_t crc32_ieee(const uint8_t* data, size_t n) {
+    uint32_t crc = 0xFFFFFFFFu;
+    for (size_t i = 0; i < n; i++) {
+        crc ^= (uint32_t)data[i];
+        for (int k = 0; k < 8; k++) {
+            uint32_t mask = -(int32_t)(crc & 1u);
+            crc = (crc >> 1) ^ (0xEDB88320u & mask);
         }
     }
     return ~crc;
 }
 
-// Writes bits into frame_buf sequentially; bitpos 0 maps to bit 7 of byte 0.
-bool put_bit(uint8_t *out, size_t out_cap_bytes, int *bitpos, uint8_t bit) {
-    int bp = *bitpos;
-    int byte_i = bp >> 3;
-    int bit_i = bp & 7;
-    if ((size_t)byte_i >= out_cap_bytes)
-        return false;
-
-    if (bit)
-        out[byte_i] |= (uint8_t)(1u << (7 - bit_i));
-    *bitpos = bp + 1;
+static inline bool push_bit(uint8_t* out, uint32_t* bitpos, uint8_t bit) {
+    uint32_t byte_i = (*bitpos) >> 3;
+    uint32_t bit_i  = (*bitpos) & 7;
+    if (byte_i >= FRAME_MAX_BYTES) return false;
+    if (bit) out[byte_i] |= (uint8_t)(1u << (7 - bit_i));
+    (*bitpos)++;
     return true;
 }
 
-bool put_byte_msb(uint8_t *out, size_t cap, int *bitpos, uint8_t v) {
-    for (int b = 7; b >= 0; b--) {
-        if (!put_bit(out, cap, bitpos, (v >> b) & 1u))
-            return false;
-    }
-    return true;
-}
+static uint32_t build_hdlc_frame(const uint8_t* pl, size_t pl_len, uint8_t* out) {
+    // Build tmp = payload || crc_le
+    uint8_t tmp[PAYLOAD_LEN + CRC_LEN];
+    memcpy(tmp, pl, pl_len);
 
-bool put_bytes_stuffed(uint8_t *out, size_t cap, int *bitpos, const uint8_t *data, size_t nbytes,
-                       int *ones) {
-    for (size_t i = 0; i < nbytes; i++) {
-        uint8_t v = data[i];
+    uint32_t crc = crc32_ieee(pl, pl_len);
+    tmp[pl_len + 0] = (uint8_t)((crc >> 0)  & 0xFF);
+    tmp[pl_len + 1] = (uint8_t)((crc >> 8)  & 0xFF);
+    tmp[pl_len + 2] = (uint8_t)((crc >> 16) & 0xFF);
+    tmp[pl_len + 3] = (uint8_t)((crc >> 24) & 0xFF);
+
+    memset(out, 0, FRAME_MAX_BYTES);
+    out[0] = FLAG_BYTE;
+
+    uint32_t bitpos = 8; // after first flag byte
+    int ones = 0;
+
+    for (size_t i = 0; i < (pl_len + CRC_LEN); i++) {
         for (int b = 7; b >= 0; b--) {
-            uint8_t bit = (v >> b) & 1u;
+            uint8_t bit = (tmp[i] >> b) & 1u;
 
-            if (!put_bit(out, cap, bitpos, bit))
-                return false;
+            if (!push_bit(out, &bitpos, bit)) return 0;
 
-            if (bit) {
-                (*ones)++;
-                if (*ones == 5) {
-                    if (!put_bit(out, cap, bitpos, 0))
-                        return false;
-                    *ones = 0;
-                }
-            } else {
-                *ones = 0;
+            if (bit) ones++;
+            else ones = 0;
+
+            if (ones == 5) {
+                if (!push_bit(out, &bitpos, 0)) return 0; // stuffed 0
+                ones = 0;
             }
         }
     }
-    return true;
+
+    uint32_t bytes = (bitpos + 7u) >> 3;
+    if (bytes + 1u > FRAME_MAX_BYTES) return 0;
+
+    // Put trailing flag at the next byte boundary
+    out[bytes] = FLAG_BYTE;
+    return bytes + 1u;
 }
 
-inline int bytes_used_from_bitpos(int bitpos) {
-    return (bitpos + 7) >> 3;
+static void configure_dma(void) {
+    dma_chan = dma_claim_unused_channel(true);
+
+    dma_channel_config c = dma_channel_get_default_config(dma_chan);
+    channel_config_set_transfer_data_size(&c, DMA_SIZE_8);
+    channel_config_set_read_increment(&c, true);
+    channel_config_set_write_increment(&c, false);
+    channel_config_set_dreq(&c, DREQ_SPI0_TX);
+
+    dma_channel_configure(
+        dma_chan,
+        &c,
+        &spi_get_hw(SPI_PORT)->dr,
+        frame_buf,
+        0,
+        false
+    );
 }
 
-static float read_rpm(int i) {
-    if (i < 0 || i >= N_CH)
-        return (float)NAN;
+static void hall_irq(uint gpio, uint32_t events) {
+    if (gpio != HALL_PIN) return;
+    if (!(events & GPIO_IRQ_EDGE_RISE)) return;
 
-#if USE_FAKE_DATA
-    (void)i;
-    return fake_signal_from_now();
-#else
-    return 67;
-#endif
-}
+    uint32_t now = (uint32_t)time_us_64();
 
-size_t build_payload(uint8_t *payload, size_t payload_cap, uint32_t now_us) {
-    const size_t need = 4 + (size_t)(4 * N_CH);
-    if (need > payload_cap)
-        return 0;
-
-    // LITTLE ENDIAN timestamp
-    payload[0] = (uint8_t)(now_us >> 0);
-    payload[1] = (uint8_t)(now_us >> 8);
-    payload[2] = (uint8_t)(now_us >> 16);
-    payload[3] = (uint8_t)(now_us >> 24);
-
-    for (int i = 0; i < N_CH; i++) {
-        // OMG i get to use a union in C! WOW.
-        union {
-            float f;
-            uint32_t u;
-        } x = {.f = read_channel(i)};
-        size_t off = 4 + (size_t)(4 * i);
-        payload[off + 0] = (uint8_t)(x.u >> 0);
-        payload[off + 1] = (uint8_t)(x.u >> 8);
-        payload[off + 2] = (uint8_t)(x.u >> 16);
-        payload[off + 3] = (uint8_t)(x.u >> 24);
+    if (last_rise_us == 0) {
+        last_rise_us = now;
+        motor_rpm = 0.0f;
+        return;
     }
 
-    return need;
+    uint32_t period_us = now - last_rise_us;
+    last_rise_us = now;
+
+    float raw_rpm = 60.0e6f / ((float)period_us * (float)PPR);
+
+    // Validate in RPM-space only
+    if (raw_rpm < MIN_RPM || raw_rpm > MAX_RPM) {
+        return;
+    }
+
+    motor_rpm = raw_rpm;
 }
 
-// START + STUFF(payload|crc) + END
-int build_frame(uint8_t *out, size_t out_cap, const uint8_t *payload, size_t payload_len) {
-    memset(out, 0, out_cap);
-    int bitpos = 0;
+static void cs_irq(uint gpio, uint32_t events) {
+    if (gpio != PIN_CS) return;
 
-    // Start flag
-    if (!put_byte_msb(out, out_cap, &bitpos, FLAG_BYTE))
-        return -1;
-
-    // Compute CRC
-    uint32_t crc = calculate_crc32(payload, payload_len);
-    uint8_t crc_le[4] = {
-        (uint8_t)(crc >> 0),
-        (uint8_t)(crc >> 8),
-        (uint8_t)(crc >> 16),
-        (uint8_t)(crc >> 24),
-    };
-
-    int ones = 0;
-
-    if (!put_bytes_stuffed(out, out_cap, &bitpos, payload, payload_len, &ones))
-        return -1;
-    if (!put_bytes_stuffed(out, out_cap, &bitpos, crc_le, sizeof(crc_le), &ones))
-        return -1;
-
-    // End flag
-    if (!put_byte_msb(out, out_cap, &bitpos, FLAG_BYTE))
-        return -1;
-
-    return bytes_used_from_bitpos(bitpos);
-}
-
-void irq_handler(uint gpio, uint32_t events) {
     if (events & GPIO_IRQ_EDGE_FALL) {
-        gpio_set_function(PIN_TX, GPIO_FUNC_SPI);
+        uint32_t ts = (uint32_t)time_us_64();
+        float rpm = motor_rpm;
 
-        spi_get_hw(SPI_PORT)->icr = SPI_SSPICR_RORIC_BITS;
-        while (spi_is_readable(SPI_PORT))
-            (void)spi_get_hw(SPI_PORT)->dr;
+        pack_u32_le(&payload[0], ts);
+        pack_f32_le(&payload[4], rpm);
+        pack_f32_le(&payload[8], rpm);
 
-        uint32_t now_us = (uint32_t)time_us_64();
-
-        uint8_t payload[MAX_PAYLOAD_BYTES];
-        size_t payload_len = build_payload(payload, sizeof(payload), now_us);
-        if (payload_len == 0)
+        uint32_t len = build_hdlc_frame(payload, PAYLOAD_LEN, frame_buf);
+        if (len == 0) {
+            set_gpio_hi_z(PIN_TX);
             return;
+        }
 
-        int frame_len = build_frame(frame_buf, sizeof(frame_buf), payload, payload_len);
-        if (frame_len <= 0)
-            return;
+        frame_len = len;
 
-        dma_hw->ch[data_chan].read_addr = (uintptr_t)frame_buf;
-        dma_channel_set_trans_count(data_chan, (uint32_t)frame_len, false);
-        dma_start_channel_mask(1u << data_chan);
+        set_tx_spi_func();
+        dma_channel_set_read_addr(dma_chan, frame_buf, false);
+        dma_channel_set_trans_count(dma_chan, frame_len, true);
+
     } else if (events & GPIO_IRQ_EDGE_RISE) {
+        if (dma_chan >= 0) dma_channel_abort(dma_chan);
         set_gpio_hi_z(PIN_TX);
     }
 }
 
-int main() {
+static void init_all(void) {
     stdio_init_all();
-    configure_dma();
 
-    gpio_init(LED);
-    gpio_set_dir(LED, GPIO_OUT);
-    gpio_put(LED, 1);
+    gpio_init(HALL_PIN);
+    gpio_set_dir(HALL_PIN, GPIO_IN);
+    gpio_pull_up(HALL_PIN); // i think this is right, might need to check
+    gpio_set_irq_enabled_with_callback(
+        HALL_PIN,
+        GPIO_IRQ_EDGE_RISE,
+        true,
+        &hall_irq
+    );
 
-#if !USE_FAKE_DATA
-    adc_init();
-    for (int i = 0; i < N_CH; i++) {
-        // Configure GPIO for ADC (safe even if duplicated)
-        adc_gpio_init(adc_gpios[i]);
-    }
-#endif
-
-    spi_init(SPI_PORT, 1000 * 1000);
+    spi_init(SPI_PORT, 1 * 1000 * 1000);
     spi_set_slave(SPI_PORT, true);
+    spi_set_format(SPI_PORT, 8, SPI_CPOL_0, SPI_CPHA_1, SPI_MSB_FIRST);
 
-    gpio_set_function(PIN_RX, GPIO_FUNC_SPI);
+    gpio_set_function(PIN_RX,  GPIO_FUNC_SPI);
     gpio_set_function(PIN_SCK, GPIO_FUNC_SPI);
-    gpio_set_function(PIN_TX, GPIO_FUNC_SPI);
-
-    spi_set_format(SPI_PORT, 8, SPI_CPOL_0, SPI_CPHA_1, false);
 
     gpio_init(PIN_CS);
     gpio_set_dir(PIN_CS, GPIO_IN);
-    gpio_set_irq_enabled_with_callback(PIN_CS, GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE, true,
-                                       &irq_handler);
+    gpio_pull_up(PIN_CS);
+    gpio_set_irq_enabled_with_callback(
+        PIN_CS,
+        GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE,
+        true,
+        &cs_irq
+    );
 
+    gpio_init(PIN_TX);
+    set_gpio_hi_z(PIN_TX);
+
+    configure_dma();
+}
+
+int main(void) {
+    init_all();
     while (true) {
-        // printf("Hello, world!\n");
-        sleep_ms(1000);
+        tight_loop_contents();
     }
 }

@@ -22,7 +22,7 @@
 constexpr uint8_t GPS_POWERKEY = 8;
 
 static constexpr uint8_t FLAG_BYTE = 0x7E;
-static constexpr int SPI_READ_MAX = 64; // bytes clocked per transaction (>= worst-case frame)
+static constexpr int SPI_READ_MAX = 32; // bytes clocked per transaction (>= worst-case frame)
 
 constexpr uint8_t SPI_MODE = 1;         // CPOL=0, CPHA=1
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
