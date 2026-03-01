@@ -68,9 +68,10 @@ The system is designed to be extended as additional sensors are brought online.
     sudo pigpiod
     ./shm_writer
    ```
-   (keep this running in one terminal — Ctrl+C to stop cleanly)
+   Keep this running in one terminal or screen, Ctrl+C to stop cleanly. Even better
+   if you register it as a systemd service. 
  
- 2. **Read sensor data in Python**
+ 3. **Read sensor data in Python**
     
     Use the class in your own code. See main in `read_shm.py` for reference, or
     ```python
