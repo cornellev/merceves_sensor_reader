@@ -22,6 +22,8 @@
 
 #define MIN_RPM  1.0f
 #define MAX_RPM  5000.0f
+#define RPM_TIMEOUT_US \
+    ((uint32_t)((60.0e6f / (MIN_RPM * (float)PPR))))
 
 #define FLAG_BYTE 0x7E
 
@@ -143,6 +145,15 @@ static void configure_dma(void) {
     );
 }
 
+static void check_rpm_zero(void) {
+    uint32_t now = (uint32_t)time_us_64();
+    if (motor_rpm > 0.0f && (now - last_rise_us) > RPM_TIMEOUT_US) {
+        uint32_t save = save_and_disable_interrupts();
+        motor_rpm = 0.0f;
+        restore_interrupts(save);
+    }
+}
+
 static void irq_handler(uint gpio, uint32_t events) {
 
     switch (gpio) {
@@ -262,6 +273,7 @@ int main(void) {
     init_all();
     while (true) {
         // printf("%d\n", gpio_get(HALL_PIN));
+        check_rpm_zero();
         tight_loop_contents();
     }
 }
