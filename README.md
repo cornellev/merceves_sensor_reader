@@ -51,7 +51,7 @@ The system is designed to be extended as additional sensors are brought online.
     },
     "motor": {
         "ts": int,            # read_snapshot()[1][17]
-        "ang_vel": float,     # read_snapshot()[1][18]
+        "rpm": float,         # read_snapshot()[1][18]
         "throttle": float,    # read_snapshot()[1][19]
     },
 }
@@ -111,7 +111,7 @@ Proposed SPI setup for UC26:
 | 23      | Driver              | u32 ts + float throttle + float brake + float turn_angle  |
 | 24      | Front RPM       | u32 ts + float rpm_left + float rpm_right   |
 | 25      | Back RPM        | u32 ts + float rpm_left + float rpm_right   |
-| 26      | Motor Controller | u32 ts + float ang_vel + float throttle |
+| 26      | Motor Controller | u32 ts + float rpm + float throttle |
 
 Bus: `/dev/spidev0.0`
 

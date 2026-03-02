@@ -181,7 +181,6 @@ static void irq_handler(uint gpio, uint32_t events) {
             break;
 
         case PIN_CS:
-
             if (events & GPIO_IRQ_EDGE_FALL) {
 
                 if (data_chan >= 0) dma_channel_abort(data_chan);
@@ -191,7 +190,7 @@ static void irq_handler(uint gpio, uint32_t events) {
                 // Clear SPI overrun and drain RX FIFO
                 spi_get_hw(SPI_PORT)->icr = SPI_SSPICR_RORIC_BITS;
                 while (spi_is_readable(SPI_PORT))
-                    (void)spi_get_hw(SPI_PORT)->dr;
+                    (void)spi_get_`hw(SPI_PORT)->dr;
 
                 uint32_t ts = (uint32_t)time_us_64();
                 float rpm = motor_rpm;

@@ -182,7 +182,7 @@ struct GPS {
 #pragma pack(push, 1)
 struct Motor {
     uint32_t ts;
-    float ang_vel;
+    float rpm;
     float throttle;
 };
 #pragma pack(pop)
@@ -610,11 +610,11 @@ class MasterShm {
         if (motor_p.size() == sizeof(Motor)) {
             const uint8_t *p = motor_p.data();
             snap.motor_snap.ts = u32_le_bytes(p + 0);
-            snap.motor_snap.ang_vel = f32_le_bytes(p + 4);
+            snap.motor_snap.rpm = f32_le_bytes(p + 4);
             snap.motor_snap.throttle = f32_le_bytes(p + 8);
         } else {
             snap.motor_snap.ts = 0;
-            snap.motor_snap.ang_vel = NANF;
+            snap.motor_snap.rpm = NANF;
             snap.motor_snap.throttle = NANF;
         }
 

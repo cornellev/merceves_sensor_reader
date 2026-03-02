@@ -98,7 +98,7 @@ class SensorShmReader:
             "rpm_front": {"ts": d[8], "rpm_left": d[9], "rpm_right": d[10]},
             "rpm_back": {"ts": d[11], "rpm_left": d[12], "rpm_right": d[13]},
             "gps": {"ts": d[14], "gps_lat": d[15], "gps_long": d[16]},
-            "motor": {"ts": d[17], "ang_vel": d[18], "throttle": d[19]},
+            "motor": {"ts": d[17], "rpm": d[18], "throttle": d[19]},
         }
 
 def main():
