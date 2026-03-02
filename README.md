@@ -22,36 +22,37 @@ The system is designed to be extended as additional sensors are brought online.
 # read_snapshot_dict() returns:
 {
     "seq": int,               # read_snapshot()[0]
+    "global_ts",              # read_snapshot()[1][0]
     "power": {
-        "ts": int,            # read_snapshot()[1][0]
-        "current": float,     # read_snapshot()[1][1]
-        "voltage": float,     # read_snapshot()[1][2]
+        "ts": int,            # read_snapshot()[1][1]
+        "current": float,     # read_snapshot()[1][2]
+        "voltage": float,     # read_snapshot()[1][3]
     },
     "driver": { 
-        "ts": int,            # read_snapshot()[1][3]
-        "throttle": float,    # read_snapshot()[1][4]
-        "velocity": float,    # read_snapshot()[1][5]
-        "turn_angle": float,  # read_snapshot()[1][6]
+        "ts": int,            # read_snapshot()[1][4]
+        "throttle": float,    # read_snapshot()[1][5]
+        "velocity": float,    # read_snapshot()[1][6]
+        "turn_angle": float,  # read_snapshot()[1][7]
     },
     "rpm_front": {
-        "ts": int,            # read_snapshot()[1][7]
-        "rpm_left": float,    # read_snapshot()[1][8]
-        "rpm_right": float,   # read_snapshot()[1][9]
+        "ts": int,            # read_snapshot()[1][8]
+        "rpm_left": float,    # read_snapshot()[1][9]
+        "rpm_right": float,   # read_snapshot()[1][10]
     },
     "rpm_back": {
-        "ts": int,            # read_snapshot()[1][10]
-        "rpm_left": float,    # read_snapshot()[1][11]
-        "rpm_right": float,   # read_snapshot()[1][12]
+        "ts": int,            # read_snapshot()[1][11]
+        "rpm_left": float,    # read_snapshot()[1][12]
+        "rpm_right": float,   # read_snapshot()[1][13]
     },
     "gps": {                  
-        "ts": int,            # read_snapshot()[1][13]
-        "lat": float,         # read_snapshot()[1][14]
-        "long": float,        # read_snapshot()[1][15]
+        "ts": int,            # read_snapshot()[1][14]
+        "lat": float,         # read_snapshot()[1][15]
+        "long": float,        # read_snapshot()[1][16]
     },
     "motor": {
-        "ts": int,            # read_snapshot()[1][16]
-        "ang_vel": float,     # read_snapshot()[1][17]
-        "throttle": float,    # read_snapshot()[1][18]
+        "ts": int,            # read_snapshot()[1][17]
+        "ang_vel": float,     # read_snapshot()[1][18]
+        "throttle": float,    # read_snapshot()[1][19]
     },
 }
 ```
@@ -89,6 +90,13 @@ The system is designed to be extended as additional sensors are brought online.
     finally:
         reader.close()
     ```
+    Please use sensor-specific timestamps for any sensor-level calculations (e.g., computing Δt).
+    
+    The 32-bit sensor timestamps are generated independently on each sensor microcontroller.
+    They may not be synchronized with one another and will wrap to 0 approximately every 71 minutes.
+    
+    Use the global 64-bit timestamp for bookkeeping purposes (e.g., time-series alignment and logging).
+    The global timestamp is applied each time the shared memory block is written.
 
 ## Electrical Section
 
