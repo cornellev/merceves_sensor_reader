@@ -188,7 +188,8 @@ struct Motor {
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SensorSnapshot { // 12 * 5 + 16 = 76 bytes
+struct SensorSnapshot { // 12 * 5 + 16 + 8 = 84 bytes
+    uint64_t global_ts;
     Power power_snap;
     Driver driver_snap;
     RPM rpm_snap_front;
@@ -199,7 +200,7 @@ struct SensorSnapshot { // 12 * 5 + 16 = 76 bytes
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SharedBlock { // 80 bytes
+struct SharedBlock { // 88 bytes
     std::atomic<uint32_t> seq;
     SensorSnapshot data;
 };
@@ -213,8 +214,8 @@ static_assert(sizeof(Driver) == 16);
 static_assert(sizeof(RPM) == 12);
 static_assert(sizeof(GPS) == 12);
 static_assert(sizeof(Motor) == 12);
-static_assert(sizeof(SensorSnapshot) == 76);
-static_assert(sizeof(SharedBlock) == 80);
+static_assert(sizeof(SensorSnapshot) == 84);
+static_assert(sizeof(SharedBlock) == 88);
 
 static constexpr const char *SHM_NAME = "/sensor_shm";
 
@@ -553,6 +554,8 @@ class MasterShm {
         auto motor_p = readFramePayload(5, sizeof(Motor));   // 12
 
         SensorSnapshot snap{};
+
+        snap.global_ts = now_us();
 
         if (power_p.size() == sizeof(Power)) {
             const uint8_t *p = power_p.data();
