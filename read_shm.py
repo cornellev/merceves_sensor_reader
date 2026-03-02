@@ -9,6 +9,7 @@ Import this file to read from shared memory
 SHM_NAME = "sensor_shm"
 
 SENSOR_FMT = "<" + (
+    "Q" +                    # global ts
     "I" + "f" + "f" +        # power
     "I" + "f" + "f" + "f" +  # driver
     "I" + "f" + "f" +        # rpm_front
@@ -91,13 +92,13 @@ class SensorShmReader:
 
         seq, d = snap
         return {
-            "seq": seq,
-            "power": {"ts": d[0],  "current": d[1],  "voltage": d[2]},
-            "driver": {"ts": d[3], "throttle": d[4], "brake": d[5], "turn_angle": d[6]},
-            "rpm_front": {"ts": d[7], "rpm_left": d[8], "rpm_right": d[9]},
-            "rpm_back": {"ts": d[10], "rpm_left": d[11], "rpm_right": d[12]},
-            "gps": {"ts": d[13], "gps_lat": d[14], "gps_long": d[15]},
-            "motor": {"ts": d[16], "ang_vel": d[17], "throttle": d[18]},
+            "seq": seq, "global_ts": d[0],
+            "power": {"ts": d[1],  "current": d[2],  "voltage": d[3]},
+            "driver": {"ts": d[4], "throttle": d[5], "brake": d[6], "turn_angle": d[7]},
+            "rpm_front": {"ts": d[8], "rpm_left": d[9], "rpm_right": d[10]},
+            "rpm_back": {"ts": d[11], "rpm_left": d[12], "rpm_right": d[13]},
+            "gps": {"ts": d[14], "gps_lat": d[15], "gps_long": d[16]},
+            "motor": {"ts": d[17], "ang_vel": d[18], "throttle": d[19]},
         }
 
 def main():
