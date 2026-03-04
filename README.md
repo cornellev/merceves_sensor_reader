@@ -4,7 +4,7 @@ HDLC-framed SPI (and GPS UART) sensor reader â†’ POSIX shared memory (seqlock) â
 
 This repository provides a C++ daemon that polls multiple SPI devices at ~200 Hz,
 decodes HDLC-framed payloads with CRC checking, simultaneously reads GPS over UART 
-with the Wireshare SIM7600X HAT at 1Hz, and publishes the latest sensor snapshot into 
+with the Waveshare SIM7600X HAT at 1Hz, and publishes the latest sensor snapshot into 
 POSIX shared memory. Consumers (e.g. Python) can read the data lock-free using a sequence 
 lock.
 
