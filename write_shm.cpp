@@ -518,7 +518,7 @@ class MasterShm {
 
             uint64_t t = now_us();
             if (t >= next_poll) {
-                next_poll += 1'000'000ULL;
+                next_poll += 200000ULL; // 5 Hz
 
                 GPS g{}; // This is fine because we don't publish failed reads
                 if (poll_gps_once(g)) {
