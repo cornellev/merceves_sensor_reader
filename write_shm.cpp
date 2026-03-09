@@ -334,27 +334,38 @@ class MasterShm {
     GPS gps_cache_{};
     std::thread gps_thread_;
     std::atomic<bool> stop_{false};
+	FILE *gps_file_{nullptr};
     bool gps_started_{false};
     int gps_serial_{-1};
 
-    void init_gps() {
-        gps_serial_ = open("/dev/serial0", O_RDONLY | O_NOCTTY);
-            
-        if(gps_serial_ < 0) {
-            std::perror("Failed to open GPS serial");
-        }
-        
-        std::fprintf(stdout, "GPS fd: %d\n", gps_serial_);
-    
-        GPS g{};
-        g.ts = 0;
-        g.gps_lat = NANF;
-        g.gps_long = NANF;
-        publish_gps(g);
-    
-        gps_started_ = true;
-        gps_thread_ = std::thread([this]() { this->gps_loop(); });
-    }
+	void init_gps() {
+	    gps_serial_ = open("/dev/serial0", O_RDONLY | O_NOCTTY);
+	    if (gps_serial_ < 0) {
+	        std::perror("Failed to open GPS serial");
+	        return;
+	    }
+	
+	    gps_file_ = fdopen(gps_serial_, "r");
+	    if (!gps_file_) {
+	        std::perror("fdopen failed");
+	        close(gps_serial_);
+	        gps_serial_ = -1;
+	        return;
+	    }
+	
+	    std::fprintf(stdout, "GPS fd: %d\n", gps_serial_);
+	
+	    GPS g{};
+	    g.ts = 0;
+	    g.gps_lat = NANF;
+	    g.gps_long = NANF;
+	    g.heading = NANF;
+	    g.speed = NANF;
+	    publish_gps(g);
+	
+	    gps_started_ = true;
+	    gps_thread_ = std::thread([this]() { this->gps_loop(); });
+	}
 
     bool init_shm() {
         shm_fd_ = shm_open(SHM_NAME, O_CREAT | O_RDWR, 0666);
@@ -471,22 +482,21 @@ class MasterShm {
     }
 
 	bool poll_gps_once(GPS &out) {
-	    if (!gps_started_) return false;
+	    if (!gps_started_ || !gps_file_) return false;
 	
-	    char buf[512];
-	    int n = read(gps_serial_, buf, sizeof(buf) - 1);
-	    if (n <= 0) return false;
-	    buf[n] = '\0';
+	    char line[512];
+	    if (!fgets(line, sizeof(line), gps_file_)) return false;
 	
-	    char *rmc = strstr(buf, "$GNRMC");
-	    if (!rmc) rmc = strstr(buf, "$GPRMC");
-	    if (!rmc) return false;
+	    if (std::strncmp(line, "$GNRMC,", 7) != 0 &&
+	        std::strncmp(line, "$GPRMC,", 7) != 0) {
+	        return false;
+	    }
 	
 	    double lat_ddmm, lon_ddmm;
 	    char status, ns, ew;
 	
-	    if (sscanf(rmc, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c",
-	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew) != 5) {
+	    if (std::sscanf(line, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c",
+	                    &status, &lat_ddmm, &ns, &lon_ddmm, &ew) != 5) {
 	        return false;
 	    }
 	
@@ -506,32 +516,27 @@ class MasterShm {
 	    float speed = NANF;
 	    float heading = NANF;
 	
-	    // advance to field 7 (speed)
 	    int commas = 0;
-	    char *p = rmc;
+	    char *p = line;
 	    while (*p && commas < 7) {
 	        if (*p == ',') commas++;
 	        p++;
 	    }
-	
 	    if (commas < 7) return false;
 	
-	    // speed field
 	    if (*p && *p != ',' && *p != '*') {
 	        double knots;
-	        if (sscanf(p, "%lf", &knots) == 1) {
+	        if (std::sscanf(p, "%lf", &knots) == 1) {
 	            speed = static_cast<float>(0.514444 * knots);
 	        }
 	    }
 	
-	    // move to course field
 	    while (*p && *p != ',' && *p != '*') p++;
 	    if (*p == ',') p++;
 	
-	    // course field
 	    if (*p && *p != ',' && *p != '*') {
 	        double course;
-	        if (sscanf(p, "%lf", &course) == 1) {
+	        if (std::sscanf(p, "%lf", &course) == 1) {
 	            heading = static_cast<float>(course);
 	        }
 	    }
@@ -545,28 +550,14 @@ class MasterShm {
 	    return true;
 	}
 
-    void gps_loop() {
-        uint64_t next_poll = now_us();
-
-        while (!stop_.load(std::memory_order_relaxed)) {
-            if (!gps_started_) {
-                usleep(100000); // 100 ms backoff if GPS never started
-                continue;
-            }
-
-            uint64_t t = now_us();
-            if (t >= next_poll) {
-                next_poll += 1000000ULL; // 1 Hz
-
-                GPS g{}; // This is fine because we don't publish failed reads
-                if (poll_gps_once(g)) {
-                    publish_gps(g);
-                }
-            }
-
-            usleep(2000);
-        }
-    }
+	void gps_loop() {
+	    while (!stop_.load(std::memory_order_relaxed)) {
+	        GPS g{};
+	        if (poll_gps_once(g)) {
+	            publish_gps(g);
+	        }
+	    }
+	}
 
     void timer_callback() {
         auto power_p = readFramePayload(1, sizeof(Power));       // 12
