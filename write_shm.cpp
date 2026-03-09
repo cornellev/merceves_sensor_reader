@@ -486,7 +486,7 @@ class MasterShm {
 	    char status, ns, ew;
 	
 	    if (sscanf(rmc, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c,%lf,%lf",
-	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew, &knots, &heading) != 5) {
+	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew, &knots, &heading) != 7) {
 	        return false;
 	    }
 	
