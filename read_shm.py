@@ -9,13 +9,13 @@ Import this file to read from shared memory
 SHM_NAME = "sensor_shm"
 
 SENSOR_FMT = "<" + (
-    "Q" +                    # global ts
-    "I" + "f" + "f" +        # power
-    "I" + "f" + "f" +        # steering
-    "I" + "f" + "f" +        # rpm_front
-    "I" + "f" + "f" +        # rpm_back
-    "I" + "f" + "f" +        # gps
-    "I" + "f" + "f"          # motor
+    "Q" +                              # global ts
+    "I" + "f" + "f" +                  # power
+    "I" + "f" + "f" +                  # steering
+    "I" + "f" + "f" +                  # rpm_front
+    "I" + "f" + "f" +                  # rpm_back
+    "I" + "f" + "f" + "f" + "f" +      # gps
+    "I" + "f" + "f"                    # motor
 )
 SENSOR_SIZE = struct.calcsize(SENSOR_FMT)
 

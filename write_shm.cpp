@@ -198,6 +198,8 @@ struct GPS { // All from GPS thread reading SIM7600
     uint32_t ts;
     float gps_lat;
     float gps_long;
+	float heading;
+	float speed;
 };
 #pragma pack(pop)
 
@@ -210,7 +212,7 @@ struct Motor { // All from Motor Pico
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SensorSnapshot { // 8 + 6 * 12 = 80 bytes
+struct SensorSnapshot { // 8 + 5 * 12 + 20 = 88 bytes
     uint64_t global_ts;
     Power power_snap;
     Steering steering_snap;
@@ -222,7 +224,7 @@ struct SensorSnapshot { // 8 + 6 * 12 = 80 bytes
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SharedBlock { // 84 bytes
+struct SharedBlock { // 92 bytes
     std::atomic<uint32_t> seq;
     SensorSnapshot data;
 };
@@ -234,10 +236,10 @@ static_assert(offsetof(SharedBlock, data) == 4, "data must start immediately aft
 static_assert(sizeof(Power) == 12);
 static_assert(sizeof(Steering) == 12);
 static_assert(sizeof(RPM) == 12);
-static_assert(sizeof(GPS) == 12);
+static_assert(sizeof(GPS) == 20);
 static_assert(sizeof(Motor) == 12);
-static_assert(sizeof(SensorSnapshot) == 80);
-static_assert(sizeof(SharedBlock) == 84);
+static_assert(sizeof(SensorSnapshot) == 88);
+static_assert(sizeof(SharedBlock) == 92);
 
 static constexpr const char *SHM_NAME = "/sensor_shm";
 
@@ -480,11 +482,11 @@ class MasterShm {
 	    if (!rmc) rmc = strstr(buf, "$GPRMC");
 	    if (!rmc) return false;
 	
-	    double lat_ddmm, lon_ddmm;
+	    double lat_ddmm, lon_ddmm, knots, heading;
 	    char status, ns, ew;
 	
-	    if (sscanf(rmc, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c",
-	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew) != 5) {
+	    if (sscanf(rmc, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c,%lf,%lf",
+	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew, &knots, &heading) != 5) {
 	        return false;
 	    }
 	
@@ -497,6 +499,8 @@ class MasterShm {
 	    int lon_deg = int(lon_ddmm / 100.0);
 	    double lon_min = lon_ddmm - lon_deg * 100.0;
 	    double lon = lon_deg + lon_min / 60.0;
+
+        double speed = 0.514444 * knots
 	
 	    if (ns == 'S') lat = -lat;
 	    if (ew == 'W') lon = -lon;
@@ -504,6 +508,8 @@ class MasterShm {
 	    out.ts = static_cast<uint32_t>(now_us());
 	    out.gps_lat = static_cast<float>(lat);
 	    out.gps_long = static_cast<float>(lon);
+		out.heading = static_cast<float>(heading);
+		out.speed = static_cast<float>(speed);
 	    return true;
 	}
 
