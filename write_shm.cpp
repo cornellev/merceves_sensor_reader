@@ -485,7 +485,6 @@ class MasterShm {
 	    double lat_ddmm, lon_ddmm;
 	    char status, ns, ew;
 	
-	    // Parse only required fields up through E/W
 	    if (sscanf(rmc, "%*[^,],%*[^,],%c,%lf,%c,%lf,%c",
 	               &status, &lat_ddmm, &ns, &lon_ddmm, &ew) != 5) {
 	        return false;
@@ -507,7 +506,7 @@ class MasterShm {
 	    float speed = NANF;
 	    float heading = NANF;
 	
-	    // Find field 7 (speed) and field 8 (course) manually
+	    // advance to field 7 (speed)
 	    int commas = 0;
 	    char *p = rmc;
 	    while (*p && commas < 7) {
@@ -515,17 +514,21 @@ class MasterShm {
 	        p++;
 	    }
 	
-	    if (commas >= 7 && *p && *p != ',' && *p != '*') {
+	    if (commas < 7) return false;
+	
+	    // speed field
+	    if (*p && *p != ',' && *p != '*') {
 	        double knots;
 	        if (sscanf(p, "%lf", &knots) == 1) {
 	            speed = static_cast<float>(0.514444 * knots);
 	        }
 	    }
 	
-	    // Move to next field for course
+	    // move to course field
 	    while (*p && *p != ',' && *p != '*') p++;
 	    if (*p == ',') p++;
 	
+	    // course field
 	    if (*p && *p != ',' && *p != '*') {
 	        double course;
 	        if (sscanf(p, "%lf", &course) == 1) {
@@ -538,6 +541,7 @@ class MasterShm {
 	    out.gps_long = static_cast<float>(lon);
 	    out.heading = heading;
 	    out.speed = speed;
+	
 	    return true;
 	}
 
