@@ -500,7 +500,7 @@ class MasterShm {
 	    double lon_min = lon_ddmm - lon_deg * 100.0;
 	    double lon = lon_deg + lon_min / 60.0;
 
-        double speed = 0.514444 * knots
+        double speed = 0.514444 * knots;
 	
 	    if (ns == 'S') lat = -lat;
 	    if (ew == 'W') lon = -lon;
