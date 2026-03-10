@@ -24,7 +24,8 @@ constexpr uint8_t GPS_POWERKEY = 8;
 static constexpr uint8_t FLAG_BYTE = 0x7E;
 static constexpr int SPI_READ_MAX = 64; // >= worst-case frame
 
-constexpr uint8_t SPI_MODE = 1;         // CPOL=0, CPHA=1
+// constexpr uint8_t SPI_MODE = 1;         // CPOL=0, CPHA=1
+constexpr uint8_t SPI_MODE = SPI_MODE_1 | SPI_CS_HIGH;  // CPOL=0, CPHA=1, CS active high
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
 constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
 
@@ -422,13 +423,13 @@ class MasterShm {
 
     void select_cs(int chipSelect) {
         for (int i = 1; i < 6; i++) {
-            gpio_write(pi_, CS_PINS[i - 1], chipSelect == i ? 0 : 1);
+            gpio_write(pi_, CS_PINS[i - 1], chipSelect == i ? 1 : 0);
         }
     }
 
     void deselect_all_cs() {
         for (int i = 1; i < 6; i++) {
-            gpio_write(pi_, CS_PINS[i - 1], 1);
+            gpio_write(pi_, CS_PINS[i - 1], 0);
         }
     }
 

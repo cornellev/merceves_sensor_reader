@@ -26,6 +26,22 @@ BLOCK_SIZE = SEQ_SIZE + SENSOR_SIZE
 def _read_seq(buf) -> int:
     return struct.unpack_from(SEQ_FMT, buf, 0)[0]
 
+def format_snap(snap):
+    lines = [f"seq: {snap['seq']}  ts: {snap['global_ts']}"]
+    sensors = {
+        "power":     ["current", "voltage"],
+        "steering":  ["brake_pressure", "turn_angle"],
+        "rpm_front": ["rpm_left", "rpm_right"],
+        "rpm_back":  ["rpm_left", "rpm_right"],
+        "gps":       ["gps_lat", "gps_long", "heading", "speed"],
+        "motor":     ["rpm", "throttle"],
+    }
+    for sensor, fields in sensors.items():
+        d = snap[sensor]
+        vals = "  ".join(f"{f}: {d[f]:.3f}" if isinstance(d[f], float) else f"{f}: {d[f]}" for f in fields)
+        lines.append(f"  {sensor:<12} ts: {d['ts']:<12} {vals}")
+    return "\n".join(lines)
+
 class SensorShmReader:
     """
     Attach to an existing POSIX shared memory block written by the SPI process.
@@ -113,7 +129,8 @@ def main():
         while True:
             snap = reader.read_snapshot_dict()
             if snap is not None:
-                print(snap)
+                print(format_snap(snap))
+                # print(snap)
             time.sleep(PERIOD)
     finally:
         reader.close()
