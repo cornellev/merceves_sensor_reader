@@ -31,6 +31,9 @@ constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
 
 static constexpr int CS_PINS[5] = {22, 23, 24, 25, 26};
 
+constexpr float wheel_diameter_m = 0.58166f;
+constexpr float lambda = 0.05f;
+
 // Boards:
 // RPM (fl, fr), RPM (bl, br), Joulemeter (current, voltage), Steering (brake pressure, steer angle), Motor (rpm, throttle)
 // 22 - Power
@@ -213,7 +216,13 @@ struct Motor { // All from Motor Pico
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SensorSnapshot { // 8 + 5 * 12 + 20 = 88 bytes
+struct Filtered { // Filtered Data, currently just speed
+    float speed;
+};
+#pragma pack(pop)
+
+#pragma pack(push, 1)
+struct SensorSnapshot { // 8 + 5 * 12 + 20 + 4 = 92 bytes
     uint64_t global_ts;
     Power power_snap;
     Steering steering_snap;
@@ -221,11 +230,12 @@ struct SensorSnapshot { // 8 + 5 * 12 + 20 = 88 bytes
     RPM rpm_snap_back;
     GPS gps_snap;
     Motor motor_snap;
+    Filtered filtered_snap;
 };
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SharedBlock { // 92 bytes
+struct SharedBlock { // 96 bytes
     std::atomic<uint32_t> seq;
     SensorSnapshot data;
 };
@@ -239,8 +249,9 @@ static_assert(sizeof(Steering) == 12);
 static_assert(sizeof(RPM) == 12);
 static_assert(sizeof(GPS) == 20);
 static_assert(sizeof(Motor) == 12);
-static_assert(sizeof(SensorSnapshot) == 88);
-static_assert(sizeof(SharedBlock) == 92);
+static_assert(sizeof(Filtered) == 4);
+static_assert(sizeof(SensorSnapshot) == 92);
+static_assert(sizeof(SharedBlock) == 96);
 
 static constexpr const char *SHM_NAME = "/sensor_shm";
 
@@ -300,6 +311,15 @@ class MasterShm {
         if (gps_thread_.joinable())
             gps_thread_.join();
 
+        if (gps_file_) {
+            fclose(gps_file_);
+            gps_file_ = nullptr;
+            gps_serial_ = -1;
+        } else if (gps_serial_ >= 0) {
+            close(gps_serial_);
+            gps_serial_ = -1;
+        }
+
         shutdown_shm();
         if (spi_fd_ >= 0)
             close(spi_fd_);
@@ -329,6 +349,7 @@ class MasterShm {
     SharedBlock *shm_{nullptr};
 
     int errcount = 0;
+    float speed = 0;
 
     // GPS thread
     std::atomic<uint32_t> gps_seq_{0};
@@ -643,6 +664,19 @@ class MasterShm {
             snap.motor_snap.rpm = NANF;
             snap.motor_snap.throttle = NANF;
         }
+
+        float new_speed = NANF;
+        if (std::isfinite(snap.rpm_snap_front.rpm_left)) {
+            new_speed = snap.rpm_snap_front.rpm_left
+                    * 3.1415926535f
+                    * wheel_diameter_m
+                    / 60.0f;  // rpm -> m/s
+        }
+
+        if (std::isfinite(new_speed)) {
+            speed = lambda * new_speed + (1.0f - lambda) * speed;
+        }
+        snap.filtered_snap.speed = speed;
 
         snap.gps_snap = read_gps_cached(); // Latest GPS snapshot from GPS thread
 
