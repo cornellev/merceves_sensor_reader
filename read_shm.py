@@ -52,7 +52,7 @@ def format_snap(snap):
 
         vals = "  ".join(
             f"{NAME}{f}:{RESET} "
-            f"{VALUE}{d[f]:.3f}{RESET}" if isinstance(d[f], float)
+            f"{VALUE}{d[f]}{RESET}" if isinstance(d[f], float)
             else f"{NAME}{f}:{RESET} {VALUE}{d[f]}{RESET}"
             for f in fields
         )
@@ -141,7 +141,7 @@ class SensorShmReader:
         }
 
 def main():
-    RATE = 10
+    RATE = 100
     PERIOD = 1 / RATE
 
     reader = SensorShmReader()
