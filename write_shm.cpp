@@ -581,6 +581,22 @@ class MasterShm {
 	    }
 	}
 
+    float filtered_speed(float old_speed, float rpm) {
+        float new_speed = NANF;
+        if (std::isfinite(rpm)) {
+            new_speed = rpm
+                    * 3.1415926535f
+                    * wheel_diameter_m
+                    / 60.0f;  // rpm -> m/s
+        }
+
+        if (std::isfinite(new_speed)) {
+            new_speed = lambda * new_speed + (1.0f - lambda) * old_speed;
+        }
+
+        return new_speed;
+    }
+
     void timer_callback() {
         auto power_p = readFramePayload(1, sizeof(Power));       // 12
         auto steering_p = readFramePayload(2, sizeof(Steering)); // 12
@@ -665,17 +681,7 @@ class MasterShm {
             snap.motor_snap.throttle = NANF;
         }
 
-        float new_speed = NANF;
-        if (std::isfinite(snap.rpm_snap_front.rpm_left)) {
-            new_speed = snap.rpm_snap_front.rpm_left
-                    * 3.1415926535f
-                    * wheel_diameter_m
-                    / 60.0f;  // rpm -> m/s
-        }
-
-        if (std::isfinite(new_speed)) {
-            speed = lambda * new_speed + (1.0f - lambda) * speed;
-        }
+        speed = filtered_speed(speed, snap.rpm_snap_front.rpm_left);
         snap.filtered_snap.speed = speed;
 
         snap.gps_snap = read_gps_cached(); // Latest GPS snapshot from GPS thread
