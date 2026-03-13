@@ -15,7 +15,8 @@ SENSOR_FMT = "<" + (
     "I" + "f" + "f" +                  # rpm_front
     "I" + "f" + "f" +                  # rpm_back
     "I" + "f" + "f" + "f" + "f" +      # gps
-    "I" + "f" + "f"                    # motor
+    "I" + "f" + "f" +                  # motor
+    "f"                                # filtered
 )
 SENSOR_SIZE = struct.calcsize(SENSOR_FMT)
 
