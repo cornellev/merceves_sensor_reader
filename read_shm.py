@@ -152,7 +152,6 @@ def main():
         "mode",
         choices=["formatted", "unformatted"],
         nargs="?",
-        default="formatted",
         help="Output mode"
     )
     args = parser.parse_args()
