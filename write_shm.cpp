@@ -349,7 +349,7 @@ class MasterShm {
     SharedBlock *shm_{nullptr};
 
     int errcount = 0;
-    float speed = 0;
+    float speed = NANF;
 
     // GPS thread
     std::atomic<uint32_t> gps_seq_{0};
@@ -581,21 +581,22 @@ class MasterShm {
 	    }
 	}
 
-    float filtered_speed(float old_speed, float rpm) {
-        float new_speed = NANF;
-        if (std::isfinite(rpm)) {
-            new_speed = rpm
-                    * 3.1415926535f
-                    * wheel_diameter_m
-                    / 60.0f;  // rpm -> m/s
-        }
-
-        if (std::isfinite(new_speed)) {
-            new_speed = lambda * new_speed + (1.0f - lambda) * old_speed;
-        }
-
-        return new_speed;
-    }
+	float filtered_speed(float old_speed, float rpm) {
+	    float meas_speed = NANF;
+	    if (std::isfinite(rpm)) {
+	        meas_speed = rpm * 3.1415926535f * wheel_diameter_m / 60.0f;
+	    }
+	
+	    if (!std::isfinite(meas_speed)) {
+	        return old_speed;  // keep previous estimate if measurement is bad
+	    }
+	
+	    if (!std::isfinite(old_speed)) {
+	        return meas_speed; // initialize filter from first valid measurement
+	    }
+	
+	    return lambda * meas_speed + (1.0f - lambda) * old_speed;
+	}
 
     void timer_callback() {
         auto power_p = readFramePayload(1, sizeof(Power));       // 12
