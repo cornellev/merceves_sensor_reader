@@ -44,7 +44,7 @@ def format_snap(snap):
         "steering":  ["brake_pressure", "turn_angle"],
         "rpm_front": ["rpm_left", "rpm_right"],
         "rpm_back":  ["rpm_left", "rpm_right"],
-        "gps":       ["gps_lat", "gps_long", "heading", "speed"],
+        "gps":       ["lat", "long", "heading", "speed"],
         "motor":     ["rpm", "throttle"],
         "filtered":  ["speed"]
     }
