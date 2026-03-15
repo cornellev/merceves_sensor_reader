@@ -51,8 +51,15 @@ def format_snap(snap):
     for sensor, fields in sensors.items():
         d = snap[sensor]
 
+        def fmt(field, value):
+            if isinstance(value, float):
+                if field in ("lat", "long"):
+                    return f"{value}"
+                return f"{value:.4f}"
+            return f"{value}"
+
         vals = "  ".join(
-            f"{NAME}{f}:{RESET} {VALUE}{d[f]}{RESET}"
+            f"{NAME}{f}:{RESET} {VALUE}{fmt(f, d[f])}{RESET}"
             for f in fields
         )
 
