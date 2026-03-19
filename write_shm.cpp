@@ -29,14 +29,14 @@ constexpr uint8_t SPI_MODE = SPI_MODE_1 | SPI_CS_HIGH;  // CPOL=0, CPHA=1, CS ac
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
 constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
 
-static constexpr int CS_PINS[5] = {22, 23, 24, 25, 26};
+static constexpr int CS_PINS[5] = {27, 23, 24, 25, 26};
 
 constexpr float wheel_diameter_m = 0.58166f;
 constexpr float lambda = 0.05f;
 
 // Boards:
 // RPM (fl, fr), RPM (bl, br), Joulemeter (current, voltage), Steering (brake pressure, steer angle), Motor (rpm, throttle)
-// 22 - Power
+// 27 - Power
 // 23 - Steering
 // 24 - RPM front
 // 25 - RPM back

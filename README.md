@@ -109,7 +109,7 @@ Proposed SPI setup for UC26:
 
 | CS GPIO | Description          | Format                                                    |
 |---------|----------------------|-----------------------------------------------------------|
-| 22      | Power Monitor        | u32 ts + float current + float voltage                    |
+| 27      | Power Monitor        | u32 ts + float current + float voltage                    |
 | 23      | Steering             | u32 ts +  float brake_pressure + float turn_angle         |
 | 24      | Front RPM            | u32 ts + float rpm_left + float rpm_right                 |
 | 25      | Back RPM             | u32 ts + float rpm_left + float rpm_right                 |
