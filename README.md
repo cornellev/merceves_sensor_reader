@@ -111,8 +111,8 @@ Proposed SPI setup for UC26:
 |---------|----------------------|-----------------------------------------------------------|
 | 27      | Power Monitor        | u32 ts + float current + float voltage                    |
 | 23      | Steering             | u32 ts +  float brake_pressure + float turn_angle         |
-| 24      | Front RPM            | u32 ts + float rpm_left + float rpm_right                 |
-| 25      | Back RPM             | u32 ts + float rpm_left + float rpm_right                 |
+| 25      | Front RPM            | u32 ts + float rpm_left + float rpm_right                 |
+| 24      | Back RPM             | u32 ts + float rpm_left + float rpm_right                 |
 | 26      | Motor Controller     | u32 ts + float rpm + float throttle                       |
 
 Bus: `/dev/spidev0.0`

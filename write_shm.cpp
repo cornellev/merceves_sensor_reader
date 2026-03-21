@@ -29,7 +29,7 @@ constexpr uint8_t SPI_MODE = SPI_MODE_1 | SPI_CS_HIGH;  // CPOL=0, CPHA=1, CS ac
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
 constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
 
-static constexpr int CS_PINS[5] = {27, 23, 24, 25, 26};
+static constexpr int CS_PINS[5] = {27, 23, 25, 24, 26};
 
 constexpr float wheel_diameter_m = 0.58166f;
 constexpr float lambda = 0.05f;
@@ -38,8 +38,8 @@ constexpr float lambda = 0.05f;
 // RPM (fl, fr), RPM (bl, br), Joulemeter (current, voltage), Steering (brake pressure, steer angle), Motor (rpm, throttle)
 // 27 - Power
 // 23 - Steering
-// 24 - RPM front
-// 25 - RPM back
+// 25 - RPM front
+// 24 - RPM back
 // 26 - Motor
 
 constexpr float NANF = (std::nanf("1"));
@@ -649,9 +649,6 @@ class MasterShm {
             snap.rpm_snap_front.rpm_left = f32_le_bytes(p + 4);
             snap.rpm_snap_front.rpm_right = f32_le_bytes(p + 8);
         } else {
-			errcount++;
-            std::fprintf(stderr, "Failed to read RPM frame, errcount %d\n", errcount);
-			
             snap.rpm_snap_front.ts = 0;
             snap.rpm_snap_front.rpm_left = NANF;
             snap.rpm_snap_front.rpm_right = NANF;
@@ -663,6 +660,9 @@ class MasterShm {
             snap.rpm_snap_back.rpm_left = f32_le_bytes(p + 4);
             snap.rpm_snap_back.rpm_right = f32_le_bytes(p + 8);
         } else {
+            errcount++;
+            std::fprintf(stderr, "Failed to read RPM frame, errcount %d\n", errcount);
+            
             snap.rpm_snap_back.ts = 0;
             snap.rpm_snap_back.rpm_left = NANF;
             snap.rpm_snap_back.rpm_right = NANF;
@@ -682,7 +682,8 @@ class MasterShm {
             snap.motor_snap.throttle = NANF;
         }
 
-        speed = filtered_speed(speed, snap.rpm_snap_front.rpm_left);
+        float avg_rpm = (snap.rpm_snap_back.rpm_left + snap.rpm_snap_back.rpm_right) / 2.0;
+        speed = filtered_speed(speed, avg_rpm);
         snap.filtered_snap.speed = speed;
 
         snap.gps_snap = read_gps_cached(); // Latest GPS snapshot from GPS thread
