@@ -628,7 +628,7 @@ class MasterShm {
         if (power_p.size() == sizeof(Power)) {
             const uint8_t *p = power_p.data();
             snap.power_snap.ts = u32_le_bytes(p + 0);
-            snap.power_snap.current = f32_le_bytes(p + 4);
+            snap.power_snap.current = f32_le_bytes(p + 4) - 0.45f; // temp bias needed
             snap.power_snap.voltage = f32_le_bytes(p + 8);
         } else {
             // For debugging, we only use Power for now
