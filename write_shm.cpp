@@ -35,7 +35,7 @@ constexpr float wheel_diameter_m = 0.58166f;
 constexpr float lambda = 0.05f;
 
 // Boards:
-// RPM (fl, fr), RPM (bl, br), Joulemeter (current, voltage), Steering (brake pressure, steer angle), Motor (rpm, throttle)
+// RPM (fl, fr), RPM (bl, br), Joulemeter (current, voltage), Steering (brake pressure, steer angle), Motor (rpm, duty cycle)
 // 27 - Power
 // 23 - Steering
 // 25 - RPM front
@@ -211,7 +211,7 @@ struct GPS { // All from GPS thread reading SIM7600
 struct Motor { // All from Motor Pico
     uint32_t ts;
     float rpm;
-    float throttle;
+    float duty_cycle;
 };
 #pragma pack(pop)
 
@@ -608,7 +608,7 @@ class MasterShm {
         // Power: ts (4), current (4), voltage (4)
         // Steering: ts (4), brake_pressure (4), turn_angle (4)
         // RPM: ts (4), rpm_left (4), rpm_right (4)
-        // Motor: ts (4), rpm (4), throttle (4)
+        // Motor: ts (4), rpm (4), duty_cycle (4)
 
         SensorSnapshot snap{};
 
@@ -672,14 +672,14 @@ class MasterShm {
             const uint8_t *p = motor_p.data();
             snap.motor_snap.ts = u32_le_bytes(p + 0);
             snap.motor_snap.rpm = f32_le_bytes(p + 4);
-            snap.motor_snap.throttle = f32_le_bytes(p + 8);
+            snap.motor_snap.duty_cycle = f32_le_bytes(p + 8);
         } else {
 			errcount++;
             std::fprintf(stderr, "Failed to read Motor frame, errcount %d\n", errcount);
 			
             snap.motor_snap.ts = 0;
             snap.motor_snap.rpm = NANF;
-            snap.motor_snap.throttle = NANF;
+            snap.motor_snap.duty_cycle = NANF;
         }
 
         float avg_rpm = (snap.rpm_snap_back.rpm_left + snap.rpm_snap_back.rpm_right) / 2.0;

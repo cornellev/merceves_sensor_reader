@@ -44,7 +44,7 @@ def format_snap(snap):
         "rpm_front": ["rpm_left", "rpm_right"],
         "rpm_back":  ["rpm_left", "rpm_right"],
         "gps":       ["lat", "long", "heading", "speed"],
-        "motor":     ["rpm", "throttle"],
+        "motor":     ["rpm", "duty_cycle"],
         "filtered":  ["speed"],
     }
 
@@ -146,7 +146,7 @@ class SensorShmReader:
             "rpm_front": {"ts": d[7], "rpm_left": d[8], "rpm_right": d[9]},
             "rpm_back": {"ts": d[10], "rpm_left": d[11], "rpm_right": d[12]},
             "gps": {"ts": d[13], "lat": d[14], "long": d[15], "heading": d[16], "speed": d[17]},
-            "motor": {"ts": d[18], "rpm": d[19], "throttle": d[20]},
+            "motor": {"ts": d[18], "rpm": d[19], "duty_cycle": d[20]},
             "filtered": {"speed": d[21]}
         }
 
