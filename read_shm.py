@@ -9,6 +9,7 @@ SHM_NAME = "sensor_shm"
 
 SENSOR_FMT = "<" + (
     "Q" +                              # global ts
+    "I" +                              # errcount
     "I" + "f" + "f" +                  # power
     "I" + "f" + "f" +                  # steering
     "I" + "f" + "f" +                  # rpm_front
@@ -36,6 +37,7 @@ def format_snap(snap):
     lines = [
         f"{HEADER}seq:{RESET} {VALUE}{snap['seq']}{RESET}  "
         f"{HEADER}ts:{RESET} {VALUE}{snap['global_ts']}{RESET}"
+        f"{HEADER}errcount:{RESET} {VALUE}{snap['errcount']}{RESET}"
     ]
 
     sensors = {
@@ -140,14 +142,14 @@ class SensorShmReader:
 
         seq, d = snap
         return {
-            "seq": seq, "global_ts": d[0],
-            "power": {"ts": d[1],  "current": d[2],  "voltage": d[3]},
-            "steering": {"ts": d[4], "brake_pressure": d[5], "turn_angle": d[6]},
-            "rpm_front": {"ts": d[7], "rpm_left": d[8], "rpm_right": d[9]},
-            "rpm_back": {"ts": d[10], "rpm_left": d[11], "rpm_right": d[12]},
-            "gps": {"ts": d[13], "lat": d[14], "long": d[15], "heading": d[16], "speed": d[17]},
-            "motor": {"ts": d[18], "rpm": d[19], "duty_cycle": d[20]},
-            "filtered": {"speed": d[21]}
+            "seq": seq, "global_ts": d[0], "errcount": d[1],
+            "power": {"ts": d[2],  "current": d[3],  "voltage": d[4]},
+            "steering": {"ts": d[5], "brake_pressure": d[6], "turn_angle": d[7]},
+            "rpm_front": {"ts": d[8], "rpm_left": d[9], "rpm_right": d[10]},
+            "rpm_back": {"ts": d[11], "rpm_left": d[12], "rpm_right": d[13]},
+            "gps": {"ts": d[14], "lat": d[15], "long": d[16], "heading": d[17], "speed": d[18]},
+            "motor": {"ts": d[19], "rpm": d[20], "duty_cycle": d[21]},
+            "filtered": {"speed": d[22]}
         }
 
 def main():

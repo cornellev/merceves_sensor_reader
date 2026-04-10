@@ -224,8 +224,9 @@ struct Filtered { // Filtered Data, currently just speed
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SensorSnapshot { // 8 + 5 * 12 + 20 + 4 = 92 bytes
+struct SensorSnapshot { // 8 + 4+ 5 * 12 + 20 + 4 = 96 bytes
     uint64_t global_ts;
+    uint32_t errcount;
     Power power_snap;
     Steering steering_snap;
     RPM rpm_snap_front;
@@ -237,7 +238,7 @@ struct SensorSnapshot { // 8 + 5 * 12 + 20 + 4 = 92 bytes
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-struct SharedBlock { // 96 bytes
+struct SharedBlock { // 100 bytes
     std::atomic<uint32_t> seq;
     SensorSnapshot data;
 };
@@ -252,8 +253,8 @@ static_assert(sizeof(RPM) == 12);
 static_assert(sizeof(GPS) == 20);
 static_assert(sizeof(Motor) == 12);
 static_assert(sizeof(Filtered) == 4);
-static_assert(sizeof(SensorSnapshot) == 92);
-static_assert(sizeof(SharedBlock) == 96);
+static_assert(sizeof(SensorSnapshot) == 96);
+static_assert(sizeof(SharedBlock) == 100);
 
 static constexpr const char *SHM_NAME = "/sensor_shm";
 
@@ -624,6 +625,7 @@ class MasterShm {
         SensorSnapshot snap{};
 
         snap.global_ts = now_us();
+        snap.errcount = errcount;
 
         if (power_p.size() == sizeof(Power)) {
             const uint8_t *p = power_p.data();

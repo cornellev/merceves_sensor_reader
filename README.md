@@ -22,40 +22,41 @@ The system is designed to be extended as additional sensors are brought online.
 {
     "seq": int,                     # read_snapshot()[0]
     "global_ts": int,               # read_snapshot()[1][0]
+    "errcount": int,                # read_snapshot()[1][1]
     "power": {
-        "ts": int,                  # read_snapshot()[1][1]
-        "current": float,           # read_snapshot()[1][2]
-        "voltage": float,           # read_snapshot()[1][3]
+        "ts": int,                  # read_snapshot()[1][2]
+        "current": float,           # read_snapshot()[1][3]
+        "voltage": float,           # read_snapshot()[1][4]
     },
     "steering": { 
-        "ts": int,                  # read_snapshot()[1][4]
-        "brake_pressure": float,    # read_snapshot()[1][5]
-        "turn_angle": float,        # read_snapshot()[1][6]
+        "ts": int,                  # read_snapshot()[1][5]
+        "brake_pressure": float,    # read_snapshot()[1][6]
+        "turn_angle": float,        # read_snapshot()[1][7]
     },
     "rpm_front": {
-        "ts": int,                  # read_snapshot()[1][7]
-        "rpm_left": float,          # read_snapshot()[1][8]
-        "rpm_right": float,         # read_snapshot()[1][9]
+        "ts": int,                  # read_snapshot()[1][8]
+        "rpm_left": float,          # read_snapshot()[1][9]
+        "rpm_right": float,         # read_snapshot()[1][10]
     },
     "rpm_back": {
-        "ts": int,                  # read_snapshot()[1][10]
-        "rpm_left": float,          # read_snapshot()[1][11]
-        "rpm_right": float,         # read_snapshot()[1][12]
+        "ts": int,                  # read_snapshot()[1][11]
+        "rpm_left": float,          # read_snapshot()[1][12]
+        "rpm_right": float,         # read_snapshot()[1][13]
     },
     "gps": {                  
-        "ts": int,                  # read_snapshot()[1][13]
-        "lat": float,               # read_snapshot()[1][14]
-        "long": float,              # read_snapshot()[1][15]
-        "heading": float,           # read_snapshot()[1][16] (usually empty)
-        "speed": float,             # read_snapshot()[1][17] (m/s)
+        "ts": int,                  # read_snapshot()[1][14]
+        "lat": float,               # read_snapshot()[1][15]
+        "long": float,              # read_snapshot()[1][16]
+        "heading": float,           # read_snapshot()[1][17] (usually empty)
+        "speed": float,             # read_snapshot()[1][18] (m/s)
     },
     "motor": {
-        "ts": int,                  # read_snapshot()[1][18]
-        "rpm": float,               # read_snapshot()[1][19]
-        "duty_cycle": float,        # read_snapshot()[1][20]
+        "ts": int,                  # read_snapshot()[1][19]
+        "rpm": float,               # read_snapshot()[1][20]
+        "duty_cycle": float,        # read_snapshot()[1][21]
     },
     "filtered": {
-        "speed": float              # read_snapshot()[1][21] (m/s)
+        "speed": float              # read_snapshot()[1][22] (m/s)
     }
 }
 ```
