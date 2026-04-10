@@ -36,7 +36,7 @@ HEADER = "\033[1;33m"  # yellow
 def format_snap(snap):
     lines = [
         f"{HEADER}seq:{RESET} {VALUE}{snap['seq']}{RESET}  "
-        f"{HEADER}ts:{RESET} {VALUE}{snap['global_ts']}{RESET}"
+        f"{HEADER}ts:{RESET} {VALUE}{snap['global_ts']}{RESET} "
         f"{HEADER}errcount:{RESET} {VALUE}{snap['errcount']}{RESET}"
     ]
 
