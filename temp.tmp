@@ -1,0 +1,696 @@
+[1;33mseq:[0m [1;32m343162[0m  [1;33mts:[0m [1;32m2391964366[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69914846    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343162[0m  [1;33mts:[0m [1;32m2391964366[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69914846    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343164[0m  [1;33mts:[0m [1;32m2391979931[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69931075    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343164[0m  [1;33mts:[0m [1;32m2391979931[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69931075    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343166[0m  [1;33mts:[0m [1;32m2392002516[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69947074    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.7130[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343166[0m  [1;33mts:[0m [1;32m2392002516[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69947074    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.7130[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343168[0m  [1;33mts:[0m [1;32m2392022466[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69969301    [0m [1;34mcurrent:[0m [1;32m0.6044[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343170[0m  [1;33mts:[0m [1;32m2392039220[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69989177    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343170[0m  [1;33mts:[0m [1;32m2392039220[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m69989177    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343172[0m  [1;33mts:[0m [1;32m2392057572[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70005963    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343172[0m  [1;33mts:[0m [1;32m2392057572[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70005963    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343174[0m  [1;33mts:[0m [1;32m2392076427[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70024356    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343174[0m  [1;33mts:[0m [1;32m2392076427[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70024356    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343176[0m  [1;33mts:[0m [1;32m2392095627[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70043187    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343178[0m  [1;33mts:[0m [1;32m2392113795[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70062498    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343180[0m  [1;33mts:[0m [1;32m2392125840[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70080558    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343180[0m  [1;33mts:[0m [1;32m2392125840[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70080558    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343182[0m  [1;33mts:[0m [1;32m2392139478[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70092762    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343184[0m  [1;33mts:[0m [1;32m2392152623[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70106215    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343186[0m  [1;33mts:[0m [1;32m2392165541[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70119417    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343186[0m  [1;33mts:[0m [1;32m2392165541[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70119417    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343188[0m  [1;33mts:[0m [1;32m2392179502[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70132453    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343188[0m  [1;33mts:[0m [1;32m2392179502[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70132453    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343190[0m  [1;33mts:[0m [1;32m2392201316[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70146316    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343192[0m  [1;33mts:[0m [1;32m2392221391[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70168140    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343192[0m  [1;33mts:[0m [1;32m2392221391[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70168140    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343194[0m  [1;33mts:[0m [1;32m2392241623[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70188206    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9451[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343194[0m  [1;33mts:[0m [1;32m2392241623[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70188206    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9451[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343196[0m  [1;33mts:[0m [1;32m2392257436[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70208488    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343198[0m  [1;33mts:[0m [1;32m2392273193[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70224316    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343198[0m  [1;33mts:[0m [1;32m2392273193[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70224316    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343200[0m  [1;33mts:[0m [1;32m2392294151[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70240608    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343200[0m  [1;33mts:[0m [1;32m2392294151[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70240608    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343202[0m  [1;33mts:[0m [1;32m2392309639[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70261119    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343204[0m  [1;33mts:[0m [1;32m2392324835[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70276661    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343204[0m  [1;33mts:[0m [1;32m2392324835[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70276661    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343206[0m  [1;33mts:[0m [1;32m2392341879[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70293926    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343206[0m  [1;33mts:[0m [1;32m2392341879[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70293926    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343208[0m  [1;33mts:[0m [1;32m2392359900[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70308794    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343210[0m  [1;33mts:[0m [1;32m2392377178[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70326809    [0m [1;34mcurrent:[0m [1;32m0.6850[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343210[0m  [1;33mts:[0m [1;32m2392377178[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70326809    [0m [1;34mcurrent:[0m [1;32m0.6850[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343212[0m  [1;33mts:[0m [1;32m2392392885[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70344024    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343214[0m  [1;33mts:[0m [1;32m2392405673[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70359889    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343216[0m  [1;33mts:[0m [1;32m2392419880[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70372680    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343216[0m  [1;33mts:[0m [1;32m2392419880[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70372680    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343218[0m  [1;33mts:[0m [1;32m2392437298[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70386788    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.9451[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343220[0m  [1;33mts:[0m [1;32m2392451131[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70404404    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343220[0m  [1;33mts:[0m [1;32m2392451131[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70404404    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343222[0m  [1;33mts:[0m [1;32m2392468982[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70418159    [0m [1;34mcurrent:[0m [1;32m0.6850[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343224[0m  [1;33mts:[0m [1;32m2392484224[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70436012    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343224[0m  [1;33mts:[0m [1;32m2392484224[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70436012    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343226[0m  [1;33mts:[0m [1;32m2392502271[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70451305    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343226[0m  [1;33mts:[0m [1;32m2392502271[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70451305    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343228[0m  [1;33mts:[0m [1;32m2392519741[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70470050    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343228[0m  [1;33mts:[0m [1;32m2392519741[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70470050    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343230[0m  [1;33mts:[0m [1;32m2392539277[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70486787    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8097[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343232[0m  [1;33mts:[0m [1;32m2392558465[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70506332    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343232[0m  [1;33mts:[0m [1;32m2392558465[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70506332    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343234[0m  [1;33mts:[0m [1;32m2392573351[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70525521    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343236[0m  [1;33mts:[0m [1;32m2392586073[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70540688    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343236[0m  [1;33mts:[0m [1;32m2392586073[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70540688    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343238[0m  [1;33mts:[0m [1;32m2392601040[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70553341    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343240[0m  [1;33mts:[0m [1;32m2392615736[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70568082    [0m [1;34mcurrent:[0m [1;32m0.6044[0m  [1;34mvoltage:[0m [1;32m30.8290[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343242[0m  [1;33mts:[0m [1;32m2392627838[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70583206    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343244[0m  [1;33mts:[0m [1;32m2392641309[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70594944    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343244[0m  [1;33mts:[0m [1;32m2392641309[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70594944    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343246[0m  [1;33mts:[0m [1;32m2392655074[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70608460    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343248[0m  [1;33mts:[0m [1;32m2392667730[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70622150    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343250[0m  [1;33mts:[0m [1;32m2392679931[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70634890    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343250[0m  [1;33mts:[0m [1;32m2392679931[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70634890    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.8484[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343252[0m  [1;33mts:[0m [1;32m2392697686[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70647214    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343254[0m  [1;33mts:[0m [1;32m2392713300[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70664751    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.9257[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343254[0m  [1;33mts:[0m [1;32m2392713300[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70664751    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.9257[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343256[0m  [1;33mts:[0m [1;32m2392725526[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70680449    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343258[0m  [1;33mts:[0m [1;32m2392739691[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70692708    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343260[0m  [1;33mts:[0m [1;32m2392753332[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70706773    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343260[0m  [1;33mts:[0m [1;32m2392753332[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70706773    [0m [1;34mcurrent:[0m [1;32m0.7253[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343262[0m  [1;33mts:[0m [1;32m2392765599[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70720582    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8677[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343264[0m  [1;33mts:[0m [1;32m2392779287[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70733355    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343264[0m  [1;33mts:[0m [1;32m2392779287[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70733355    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343266[0m  [1;33mts:[0m [1;32m2392797558[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70746953    [0m [1;34mcurrent:[0m [1;32m0.6850[0m  [1;34mvoltage:[0m [1;32m30.9451[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343268[0m  [1;33mts:[0m [1;32m2392811586[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70764769    [0m [1;34mcurrent:[0m [1;32m0.8462[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343270[0m  [1;33mts:[0m [1;32m2392824113[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70778812    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343270[0m  [1;33mts:[0m [1;32m2392824113[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70778812    [0m [1;34mcurrent:[0m [1;32m0.8059[0m  [1;34mvoltage:[0m [1;32m30.9064[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343272[0m  [1;33mts:[0m [1;32m2392840055[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70791362    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.7130[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343274[0m  [1;33mts:[0m [1;32m2392854896[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70807585    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m
+[1;33mseq:[0m [1;32m343276[0m  [1;33mts:[0m [1;32m2392866674[0m
+  [1;34mpower       [0m [0;36mts:[0m [1;32m70822168    [0m [1;34mcurrent:[0m [1;32m0.7656[0m  [1;34mvoltage:[0m [1;32m30.8870[0m
+  [1;34msteering    [0m [0;36mts:[0m [1;32m0           [0m [1;34mbrake_pressure:[0m [1;32mnan[0m  [1;34mturn_angle:[0m [1;32mnan[0m
+  [1;34mrpm_front   [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mrpm_back    [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm_left:[0m [1;32mnan[0m  [1;34mrpm_right:[0m [1;32mnan[0m
+  [1;34mgps         [0m [0;36mts:[0m [1;32m0           [0m [1;34mlat:[0m [1;32mnan[0m  [1;34mlong:[0m [1;32mnan[0m  [1;34mheading:[0m [1;32mnan[0m  [1;34mspeed:[0m [1;32mnan[0m
+  [1;34mmotor       [0m [0;36mts:[0m [1;32m0           [0m [1;34mrpm:[0m [1;32mnan[0m  [1;34mthrottle:[0m [1;32mnan[0m
+  [1;34mfiltered    [0m [1;34mspeed:[0m [1;32m0.0000[0m

@@ -148,11 +148,11 @@ In `pico_firmware/adc_general_firmware/telemetry_config.h`:
 #define N_CH            2
 
 // ADC GPIO pins (must be GPIO 26–29)
-#define ADC_GPIOS       { 26, 27 }
+const int* ADC_GPIOS = { 26, 27 };
 
 // Linear conversion: value = m * volts + b
-#define CONV_M          { 1.0f, 1.0f } // I do not know the actual conversions you'll need.
-#define CONV_B          { 0.0f, 0.0f }
+const float* CONV_M = { 1.0f, 1.0f };  // I do not know the actual conversions you'll need.
+const float* CONV_B = { 0.0f, 0.0f };
 
 // ADC parameters
 #define ADC_DEADZONE    0              // Similarly I do not know this

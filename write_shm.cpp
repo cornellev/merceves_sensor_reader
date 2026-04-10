@@ -30,6 +30,8 @@ constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
 constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
 
 static constexpr int CS_PINS[5] = {27, 23, 25, 24, 26};
+static constexpr int SENSOR_EN = 17;
+static constexpr int POWER_EN = 19;
 
 constexpr float wheel_diameter_m = 0.58166f;
 constexpr float lambda = 0.05f;
@@ -276,6 +278,9 @@ class MasterShm {
         }
         deselect_all_cs();
 
+        set_mode(pi_, SENSOR_EN, PI_OUTPUT);
+        set_mode(pi_, POWER_EN, PI_OUTPUT);
+
         spi_fd_ = open(SPI_DEVICE, O_RDWR);
         if (spi_fd_ < 0) {
             std::perror("open spidev");
@@ -446,12 +451,18 @@ class MasterShm {
         for (int i = 1; i < 6; i++) {
             gpio_write(pi_, CS_PINS[i - 1], chipSelect == i ? 1 : 0);
         }
+
+        gpio_write(pi_, SENSOR_EN, (chipSelect == 2 || chipSelect == 4) ? 1 : 0);
+        gpio_write(pi_, POWER_EN, (chipSelect == 1 || chipSelect == 5) ? 1 : 0);
     }
 
     void deselect_all_cs() {
         for (int i = 1; i < 6; i++) {
             gpio_write(pi_, CS_PINS[i - 1], 0);
         }
+
+        gpio_write(pi_, SENSOR_EN, 0);
+        gpio_write(pi_, POWER_EN, 0);
     }
 
     // Reads a frame from the given chip select and decodes the payload. Returns empty vector on
@@ -617,7 +628,7 @@ class MasterShm {
         if (power_p.size() == sizeof(Power)) {
             const uint8_t *p = power_p.data();
             snap.power_snap.ts = u32_le_bytes(p + 0);
-            snap.power_snap.current = f32_le_bytes(p + 4);
+            snap.power_snap.current = f32_le_bytes(p + 4) - 0.45f; // temp bias needed
             snap.power_snap.voltage = f32_le_bytes(p + 8);
         } else {
             // For debugging, we only use Power for now
