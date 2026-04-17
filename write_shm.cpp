@@ -24,7 +24,7 @@ static constexpr uint8_t FLAG_BYTE = 0x7E;
 static constexpr int SPI_READ_MAX = 64; // >= worst-case frame
 
 // constexpr uint8_t SPI_MODE = 1;         // CPOL=0, CPHA=1
-constexpr uint8_t SPI_MODE = SPI_MODE_1 | SPI_CS_HIGH;  // CPOL=0, CPHA=1, CS active high
+constexpr uint8_t SPI_MODE = SPI_MODE_1;  // CPOL=0, CPHA=1, CS active high
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
 constexpr const char *SPI_DEVICE = "/dev/spidev1.0";
 
@@ -471,7 +471,6 @@ class MasterShm {
     // failure.
     std::vector<uint8_t> readFramePayload(int chipSelect, size_t payload_len) {
         //select_cs(chipSelect);
-
         std::vector<uint8_t> tx(SPI_READ_MAX, 0x00);
         std::vector<uint8_t> rx(SPI_READ_MAX, 0x00);
 
@@ -482,11 +481,11 @@ class MasterShm {
         t.speed_hz = SPI_SPEED;
         t.bits_per_word = 8;
 
-        if (ioctl(spi_fd_, SPI_IOC_MESSAGE(1), &t) < 0) {
+        if (chipSelect!=4 || ioctl(spi_fd_, SPI_IOC_MESSAGE(1), &t) < 0) {
             std::perror("SPI transfer failed");
         }
 
-        //deselect_all_cs();
+	//deselect_all_cs();
 
         std::vector<uint8_t> payload;
         if (!decode_frame(rx, payload_len, payload)) {
@@ -636,7 +635,7 @@ class MasterShm {
         } else {
             // For debugging, we only use Power for now
             errcount++;
-            std::fprintf(stderr, "Failed to read Power frame, errcount %d\n", errcount);
+            //std::fprintf(stderr, "Failed to read Power frame, errcount %d\n", errcount);
 
             snap.power_snap.ts = 0;
             snap.power_snap.current = NANF;
@@ -650,7 +649,7 @@ class MasterShm {
             snap.steering_snap.turn_angle = f32_le_bytes(p + 8);
         } else {
 			errcount++;
-            std::fprintf(stderr, "Failed to read Steering frame, errcount %d\n", errcount);
+            //std::fprintf(stderr, "Failed to read Steering frame, errcount %d\n", errcount);
 			
             snap.steering_snap.ts = 0;
             snap.steering_snap.brake_pressure = NANF;
@@ -675,7 +674,7 @@ class MasterShm {
             snap.rpm_snap_back.rpm_right = f32_le_bytes(p + 8);
         } else {
             errcount++;
-            std::fprintf(stderr, "Failed to read RPM frame, errcount %d\n", errcount);
+            //std::fprintf(stderr, "Failed to read RPM frame, errcount %d\n", errcount);
             
             snap.rpm_snap_back.ts = 0;
             snap.rpm_snap_back.rpm_left = NANF;
@@ -689,7 +688,7 @@ class MasterShm {
             snap.motor_snap.duty_cycle = f32_le_bytes(p + 8);
         } else {
 			errcount++;
-            std::fprintf(stderr, "Failed to read Motor frame, errcount %d\n", errcount);
+            //std::fprintf(stderr, "Failed to read Motor frame, errcount %d\n", errcount);
 			
             snap.motor_snap.ts = 0;
             snap.motor_snap.rpm = NANF;
