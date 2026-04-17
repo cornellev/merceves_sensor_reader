@@ -7,7 +7,6 @@
 #include <cstring>
 #include <fcntl.h>
 #include <linux/spi/spidev.h>
-#include <pigpiod_if2.h>
 #include <string>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
@@ -27,11 +26,11 @@ static constexpr int SPI_READ_MAX = 64; // >= worst-case frame
 // constexpr uint8_t SPI_MODE = 1;         // CPOL=0, CPHA=1
 constexpr uint8_t SPI_MODE = SPI_MODE_1 | SPI_CS_HIGH;  // CPOL=0, CPHA=1, CS active high
 constexpr uint32_t SPI_SPEED = 1000000; // 1 MHz
-constexpr const char *SPI_DEVICE = "/dev/spidev0.0";
+constexpr const char *SPI_DEVICE = "/dev/spidev1.0";
 
-static constexpr int CS_PINS[5] = {27, 23, 25, 24, 26};
-static constexpr int SENSOR_EN = 17;
-static constexpr int POWER_EN = 19;
+//static constexpr int CS_PINS[5] = {27, 23, 25, 24, 26};
+//static constexpr int SENSOR_EN = 17;
+//static constexpr int POWER_EN = 19;
 
 constexpr float wheel_diameter_m = 0.58166f;
 constexpr float lambda = 0.05f;
@@ -267,20 +266,20 @@ static void handle_sigint(int) {
 class MasterShm {
   public:
     MasterShm() {
-        pi_ = pigpio_start(nullptr, nullptr);
-        if (pi_ < 0) {
-            std::fprintf(stderr, "Failed to connect to pigpiod\n");
-            return;
-        }
-        std::fprintf(stderr, "pigpio initialized\n");
+        //pi_ = pigpio_start(nullptr, nullptr);
+        //if (pi_ < 0) {
+        //    std::fprintf(stderr, "Failed to connect to pigpiod\n");
+        //    return;
+        //}
+        //std::fprintf(stderr, "pigpio initialized\n");
 
-        for (int i = 0; i < 5; i++) {
-            set_mode(pi_, CS_PINS[i], PI_OUTPUT);
-        }
-        deselect_all_cs();
+        //for (int i = 0; i < 5; i++) {
+        //    set_mode(pi_, CS_PINS[i], PI_OUTPUT);
+        //}
+        //deselect_all_cs();
 
-        set_mode(pi_, SENSOR_EN, PI_OUTPUT);
-        set_mode(pi_, POWER_EN, PI_OUTPUT);
+        //set_mode(pi_, SENSOR_EN, PI_OUTPUT);
+        //set_mode(pi_, POWER_EN, PI_OUTPUT);
 
         spi_fd_ = open(SPI_DEVICE, O_RDWR);
         if (spi_fd_ < 0) {
@@ -329,8 +328,8 @@ class MasterShm {
         shutdown_shm();
         if (spi_fd_ >= 0)
             close(spi_fd_);
-        if (pi_ >= 0)
-            pigpio_stop(pi_);
+        //if (pi_ >= 0)
+        //    pigpio_stop(pi_);
     }
 
     bool ok() const {
@@ -347,7 +346,7 @@ class MasterShm {
     }
 
   private:
-    int pi_{-1};
+    //int pi_{-1};
     int spi_fd_{-1};
     bool ok_{false};
 
@@ -448,7 +447,8 @@ class MasterShm {
         shm_->seq.store(s + 2, std::memory_order_release); // even => stable
     }
 
-    void select_cs(int chipSelect) {
+    /*
+     * void select_cs(int chipSelect) {
         for (int i = 1; i < 6; i++) {
             gpio_write(pi_, CS_PINS[i - 1], chipSelect == i ? 1 : 0);
         }
@@ -465,11 +465,12 @@ class MasterShm {
         gpio_write(pi_, SENSOR_EN, 0);
         gpio_write(pi_, POWER_EN, 0);
     }
+    */
 
     // Reads a frame from the given chip select and decodes the payload. Returns empty vector on
     // failure.
     std::vector<uint8_t> readFramePayload(int chipSelect, size_t payload_len) {
-        select_cs(chipSelect);
+        //select_cs(chipSelect);
 
         std::vector<uint8_t> tx(SPI_READ_MAX, 0x00);
         std::vector<uint8_t> rx(SPI_READ_MAX, 0x00);
@@ -485,7 +486,7 @@ class MasterShm {
             std::perror("SPI transfer failed");
         }
 
-        deselect_all_cs();
+        //deselect_all_cs();
 
         std::vector<uint8_t> payload;
         if (!decode_frame(rx, payload_len, payload)) {
