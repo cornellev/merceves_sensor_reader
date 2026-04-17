@@ -300,7 +300,7 @@ static void init_all(void) {
 int main(void) {
     init_all();
     while (true) {
-        // printf("%f, %f\n", motor_l_rpm, motor_r_rpm);
+        printf("%f, %f\n", motor_l_rpm, motor_r_rpm);
         check_rpms_zero();
         tight_loop_contents();
     }
