@@ -12,8 +12,8 @@
 #include "hardware/sync.h"
 
 #define SPI_PORT spi0
-#define PIN_RX   16
-#define PIN_CS   17
+#define PIN_RX   20
+#define PIN_CS   21
 #define PIN_SCK  18
 #define PIN_TX   19
 #define LED      25
@@ -196,6 +196,11 @@ static void update_rpm(volatile uint32_t* last_rise_us, volatile float* motor_rp
     }
 }
 
+static void answer_SPI_test(void) {
+    while (spi_is_writable(SPI_PORT)) {
+        spi_get_hw(SPI_PORT)->dr = 0xAA;
+    }
+}
 // Answers an SPI read by building a frame with the current timestamp and RPMs and starting DMA to send it
 static void answer_SPI(uint8_t* payload, uint8_t* frame_buf) {
     if (data_chan >= 0) { dma_channel_abort(data_chan); }
@@ -248,7 +253,8 @@ static void irq_handler(uint gpio, uint32_t events) {
         case PIN_CS:
             if (events & GPIO_IRQ_EDGE_FALL) {
                 answer_SPI(payload, frame_buf);
-
+                //answer_SPI_test();
+                printf("spi answered!\n");
             } else if (events & GPIO_IRQ_EDGE_RISE) {
                 if (data_chan >= 0) { dma_channel_abort(data_chan); }
                 set_gpio_hi_z(PIN_TX);
@@ -287,7 +293,7 @@ static void init_all(void) {
 
     gpio_init(PIN_CS);
     gpio_set_dir(PIN_CS, GPIO_IN);
-    gpio_pull_up(PIN_CS);
+    //gpio_pull_up(PIN_CS);
     gpio_set_irq_enabled( PIN_CS, GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE, true);
 
     // gpio_init(PIN_TX);
@@ -300,7 +306,7 @@ static void init_all(void) {
 int main(void) {
     init_all();
     while (true) {
-        printf("%f, %f\n", motor_l_rpm, motor_r_rpm);
+        //printf("%f, %f\n", motor_l_rpm, motor_r_rpm);
         check_rpms_zero();
         tight_loop_contents();
     }
