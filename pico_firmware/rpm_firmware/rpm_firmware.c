@@ -20,7 +20,7 @@
 
 #define HALL_PIN_L 2
 #define HALL_PIN_R 3
-#define PPR      32
+#define PPR      68 
 
 #define MIN_RPM  1.0f
 #define MAX_RPM  5000.0f
